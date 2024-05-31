@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/myLogo.png">
+    <title>Saute Mouton - Jeu de NIM & Saute Mouton</title>
+    <link rel="stylesheet" type="text/css" href="saute-mouton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div id="logo-header">
+            <a href="../index.html" id="logo-header-img"><img src="../imgs/myLogo.png" alt="mon logo" width="72px"></a>
+            <a href="../index.html" id="logo-header-text"><p> &nbsp;&nbsp;NIM&nbsp;&&nbsp;Saute Mouton</p></a>
+        </div>
+        <ul id="cells-header">
+            <li class="header-li" id="cells-header-accueil"><a href="../index.html"><i class="fa-solid fa-house fa-lg" style="color: #ff0000;"></i> &nbsp;Accueil</a></li>
+            <li class="header-li" id="cells-header-sm"><a href="#"><i class="fa-solid fa-gamepad fa-lg" style="color: #ff0000;"></i> &nbsp;Saute Mouton</a></li>
+            <li class="header-li" id="cells-header-nim"><a href="./nim.html"><i class="fa-solid fa-trophy fa-lg" style="color: #ff0000;"></i> &nbsp;NIM</a></li>
+            <li class="header-li" id="cells-header-apropos"><a href="./à-propos.html"><i class="fa-solid fa-circle-info fa-lg" style="color: #ff0000;"></i> &nbsp;A propos</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <div id="grand-titre-div" class="col-12">
+                <h1 id="grand-titre">Jeu de Saute Mouton</h1>
+            </div>
+            <div class="col-12">
+                <h1 id="petit-titre1">1.&nbsp; Saute Mouton : Jeu, Historique, Règles et Stratégie gagnante...</h1>
+                <div class="texte">
+                    <p>Le jeu du Saute Mouton est un jeu de réflexion et de stratégie qui met à l'épreuve la logique et la planification des joueurs. Ce jeu se joue avec des moutons noirs et blancs disposés en ligne, et le but est de faire échanger leurs positions en respectant des règles de déplacement spécifiques. Voici une présentation détaillée de ce jeu captivant.</p>
+                    <p>Bien que ce jeu ne soit pas aussi ancien que certains classiques, il s'inscrit dans la tradition des jeux de logique et de réflexion qui ont toujours fasciné les amateurs de casse-têtes. Le concept de déplacer des pièces selon des règles strictes pour atteindre une configuration cible se retrouve dans de nombreux jeux mathématiques et puzzles.</p>
+                    <p>Les règles du jeu de Saute Mouton sont précises et demandent une bonne dose de stratégie pour réussir :</p>
+                    <ol>
+                        <li><strong>Disposition initiale :</strong> Le jeu commence avec M moutons blancs et M moutons noirs, disposés dans un tableau de caractères de taille 2M + 1. Pour simplifier, nous prenons M = 3. La disposition initiale est : "B B B X N N N", où "B" représente un mouton blanc, "N" un mouton noir, et "X" un emplacement libre.</li>
+                        <li><strong>Objectif du jeu : </strong>L'objectif est d'inverser les positions des moutons blancs et noirs, pour obtenir la configuration : "N N N X B B B".</li>
+                        <li><strong>Lois de déplacement :</strong></li>
+                        <ul>
+                            <li>Les moutons blancs ne peuvent avancer que vers la droite.</li>
+                            <li>Les moutons noirs ne peuvent avancer que vers la gauche.</li>
+                            <li>Un mouton peut avancer si la case suivante est libre (par exemple, de la position 2 vers 3, ou de 4 vers 3).</li>
+                            <li>Un mouton peut sauter si la case suivante est occupée par un autre mouton et que celle d’après est libre (par exemple, de la position 1 vers 3 ou de 5 vers 3).</li>
+                            <li>Si aucun mouton ne peut bouger, la partie est perdue.</li>
+                            <li>Si les moutons ont inversé leurs positions, la partie est gagnée.</li>
+                        </ul>
+                    </ol>
+                    <figure id="image1">
+                        <img src="../imgs/sm-execution-graphe.png" alt="exemple d'éxécution du résolveur du jeu de Saute Mouton" width="850px" height="400px">
+                    </figure>
+                    <figcaption id="fc-image1"><strong>Image 1 : </strong>Exécution de notre solveur de jeu de Saute Mouton avec 6 moutons.</figcaption>
+                    <p>Pour réussir au jeu de Saute Mouton, il est crucial de planifier vos mouvements à l'avance et de suivre une stratégie méthodique. Commencez par déplacer les moutons qui peuvent avancer vers la case vide, en alternant les mouvements entre les moutons blancs et noirs pour éviter les blocages. Utilisez les sauts de manière stratégique pour faire progresser les moutons plus rapidement et assurez-vous que chaque saut permet à d'autres moutons de se déplacer ou de sauter ensuite. Enfin, anticipez les blocages en planifiant vos coups de manière à laisser toujours une voie libre pour les déplacements futurs, garantissant ainsi une progression vers l'objectif.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <h1 id="petit-titre2">2.  Saute Mouton : Notre solveur basé sur la théorie des graphes...</h1>
+                <figure id="image2">
+                    <img src="../imgs/sm-chemin-plus-court.png" alt="exemple d'éxécution du résolveur du jeu de Saute Mouton" width="620px" height="420px">
+                    <figcaption id="fc-image2"><strong>Image 2 : </strong>Le chemin le plus court pour résoudre le jeu de SM avec 6 moutons.</figcaption>
+                </figure>
+                <div class="col-12 col-md-6 bib">
+                    <div class="texte">
+                        <p>Pour résoudre le jeu de Saute Mouton, nous avons développé un solveur utilisant la théorie des graphes. Chaque configuration du jeu est représentée comme un nœud dans un graphe, et chaque mouvement valide (avancer ou sauter) est une arête reliant les nœuds. En construisant ce graphe, nous pouvons explorer toutes les configurations possibles du jeu.</p>
+                        <p>Nous utilisons l'algorithme de recherche en largeur (BFS) pour trouver la séquence optimale de mouvements, garantissant ainsi que la première solution trouvée est la plus courte. Python, avec des bibliothèques comme NetworkX, permet de manipuler facilement ces graphes. Notre solveur utilise efficacement la théorie des graphes pour trouver rapidement la solution optimale, démontrant ainsi la puissance des concepts mathématiques appliqués à la résolution de jeux de réflexion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>    
+        <div id="footer-logo">
+            <a href="https://www.univ-angers.fr/fr/index.html"><img src="../imgs/logoua.png" alt="Logo de l'UA" id="footer-logo-img" width="150px"></a>
+        </div>
+        <div id="footer-copyright">
+            <p>Copyright&nbsp; © &nbsp;2024</p>
+        </div>
+        <div id="footer-slogan">
+            <p>Résolvez vos jeux préférés en un clique</p>
+        </div>
+    </footer>
+</body>
+</html>

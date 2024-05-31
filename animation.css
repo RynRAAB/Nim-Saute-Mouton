@@ -1,0 +1,106 @@
+main{
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    background: url(./imgs/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* cursor: none; */
+}
+
+div.cursor{
+    position: relative;
+    animation: etteint 3s ease-out;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.point{
+    height: 6.5px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    animation: tourne 1.5s ease-in infinite;
+    animation-duration: 1.5s;
+}
+
+.point1{
+    background-color: darkolivegreen;
+    top:-27.95px;
+    left: -25px;
+}
+
+.point2{
+    background-color: purple;
+    top: 0;
+    left: -37.5px;
+}
+
+.point3{
+    background-color: saddlebrown;
+    top:-27.95px;
+    left: 25px;
+}
+
+.point4{
+    background-color: rgb(168,80,169);
+    top:37.5px;
+    left: 0px;
+}
+
+.point5{
+    background-color:rgb(186,128,59);
+    top:27.95px;
+    left: 25px;
+}
+
+.point6{
+    background-color: rgb(231,7,120);
+    top: 0;
+    left: 37.5px;
+}
+
+.point7{
+    background-color: rgb(178,226,56);
+    top:27.95px;
+    left: -25px;
+}
+
+.point8{
+    background-color: rgb(153,146,169);
+    top:-37.5px;
+    left: 0px;
+}
+
+@keyframes etteint{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.8
+    }
+    50%{
+        opacity: 0.6;
+    }
+    75%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes tourne {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translate(15px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translate(15px) rotate(-360deg);
+    }
+}
+
+div#point-fixe{
+    display: none;
+    animation: etteint 1s infinite ease-in;
+}

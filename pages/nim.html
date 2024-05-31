@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/myLogo.png">
+    <title>NIM - Jeu de NIM & Saute Mouton</title>
+    <link rel="stylesheet" type="text/css" href="nim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div id="logo-header">
+            <a href="../index.html" id="logo-header-img"><img src="../imgs/myLogo.png" alt="mon logo" width="72px"></a>
+            <a href="../index.html" id="logo-header-text"><p> &nbsp;&nbsp;NIM&nbsp;&&nbsp;Saute Mouton</p></a>
+        </div>
+        <ul id="cells-header">
+            <li class="header-li" id="cells-header-accueil"><a href="../index.html"><i class="fa-solid fa-house fa-lg" style="color: #ff0000;"></i> &nbsp;Accueil</a></li>
+            <li class="header-li" id="cells-header-sm"><a href="./saute-mouton.html"><i class="fa-solid fa-gamepad fa-lg" style="color: #ff0000;"></i> &nbsp;Saute Mouton</a></li>
+            <li class="header-li" id="cells-header-nim"><a href="#"><i class="fa-solid fa-trophy fa-lg" style="color: #ff0000;"></i> &nbsp;NIM</a></li>
+            <li class="header-li" id="cells-header-apropos"><a href="./à-propos.html"><i class="fa-solid fa-circle-info fa-lg" style="color: #ff0000;"></i> &nbsp;A propos</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <div class="col-12">
+                <h1 id="grand-titre">Jeu de Nim</h1>
+            </div>
+            <div class="col-12">
+                <h1 id="petit-titre1">1.&nbsp; NIM : Jeu, Historique, Règles et Stratégie gagnante...</h1>
+                <div class="texte">
+                    <p>Le jeu de Nim est un jeu de stratégie mathématique à deux joueurs qui a captivé les amateurs de jeux depuis des siècles. Ce jeu simple en apparence cache une profondeur stratégique qui a fasciné les mathématiciens et les théoriciens des jeux.</p>
+                    <p>Les origines exactes du jeu de Nim sont floues, mais il est largement reconnu qu'il provient d'une ancienne tradition de jeux de déduction. Le nom "Nim" est attribué au mathématicien américain Charles L. Bouton, qui a formalisé les règles du jeu et en a étudié les propriétés mathématiques en 1901. Bouton a démontré que le jeu de Nim peut être résolu en utilisant la théorie des jeux combinatoires introduisant ainsi le concept de "position gagnante" et "position perdante".</p>
+                    <video id="video" width="540" height="300" controls>
+                        <source src="../imgs/nim-part.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas cette  vidéo.
+                    </video>
+                    <div class="col-12 col-md-7 bib">
+                        <p>Les règles du jeu de Nim sont simples :</p>
+                        <ol>
+                            <li><strong>Mise en place : </strong>Disposez plusieurs piles d'objets (allumettes, pierres, etc...), chaque pile contenant un nombre quelconque d'objets.</li>
+                            <li><strong>Tour de jeu : </strong>Les joueurs jouent à tour de rôle. À chaque tour, un joueur doit retirer au moins un objet d'une seule pile. Il peut retirer autant d'objets qu'il le souhaite, mais uniquement d'une seule pile.</li>
+                            <li><strong>Fin du jeu : </strong>Le jeu se termine lorsque tous les objets ont été retirés. Dans la variante classique, le joueur qui prend le dernier objet est le gagnant. Il existe également une variante où le joueur qui prend le dernier objet perd.</li>
+                        </ol>
+                    </div>
+                    <p>La stratégie gagnante au jeu de Nim repose sur une analyse mathématique des piles d'objets. En termes simples, pour déterminer une position gagnante ou perdante, on utilise la somme en base 2 (ou somme binaire) des tailles des piles. Le principe fondamental est :</p>
+                    <ul>
+                        <li>Si la somme binaire (ou "nim-sum") des tailles des piles est zéro, la position est dite "perdante" pour le joueur qui doit jouer.</li>
+                        <li>Si la somme binaire est non nulle, la position est "gagnante" pour le joueur qui doit jouer.</li>
+                    </ul>
+                    <p>Pour jouer de manière optimale, un joueur doit toujours essayer de transformer une position gagnante en position perdante pour l'adversaire en choisissant judicieusement le nombre d'objets à retirer.</p>
+                    <p>Le jeu de Nim, avec ses règles simples mais sa stratégie complexe, continue de séduire aussi bien les passionnés de mathématiques que les amateurs de jeux de société. En apprenant et en appliquant les principes de la stratégie gagnante, tout joueur peut maîtriser ce jeu et augmenter ses chances de victoire.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <h1 id="petit-titre2">2.&nbsp; NIM : Notre solveur basé sur la théorie des graphes...</h1>
+                <div class="texte">
+                    <p>Le jeu de Nim est bien connu pour sa simplicité apparente et sa profondeur stratégique. Il existe de nombreuses façons d'analyser et de résoudre ce jeu, et l'une des méthodes les plus puissantes repose sur la théorie des graphes. Nous avons développé un résolveur pour le jeu de Nim en utilisant le langage Python et les concepts de la théorie des graphes. Voici comment notre solveur fonctionne et pourquoi il est efficace.</p>
+                    <p>La théorie des graphes est une branche des mathématiques qui étudie les relations entre les objets. Dans le contexte du jeu de Nim, chaque position du jeu peut être représentée comme un nœud (ou sommet) dans un graphe, et chaque coup possible peut être représenté comme une arête (ou lien) entre les nœuds. Cette représentation permet d'analyser le jeu de manière systématique et de déterminer les meilleures stratégies de jeu.</p>
+                    <p>Notre solveur pour le jeu de Nim utilise la théorie des graphes pour identifier les positions gagnantes et perdantes. Voici les principales étapes de son fonctionnement :</p>
+                    <figure>
+                        <img id="figure-img" src="../imgs/nim-execution.png" alt="exemple d'éxécution du résolveur du jeu de NIM" width="670px" height="500px">
+                        <figcaption><strong>Image 1 : </strong> Exécution de notre solveur de jeu de NIM avec 10 pierres.</figcaption>
+                    </figure>
+                    <div class="col-12 col-md-6 bib">
+                        <ol>
+                            <li>Représentation des états du jeu :</li>
+                            <ul>
+                                <li>Chaque état du jeu (c'est-à-dire la configuration des piles) est représenté par un nœud dans un graphe.</li>
+                                <li>Les transitions possibles entre les états (c'est-à-dire les coups possibles) sont représentées par des arêtes entre les nœuds.</li>
+                            </ul>
+                            <li>Analyse des positions :</li>
+                            <ul>
+                                <li>Le solveur identifie les positions gagnantes et perdantes en utilisant la notion de somme binaire (ou nim-sum). Une position est gagnante si le nim-sum est non nul et perdante si le nim-sum est nul.</li>
+                                <li>Il explore les transitions entre les états pour déterminer les meilleurs coups à jouer.</li>
+                            </ul>
+                            <li>Algorithmes de parcours de graphe :</li>
+                            <ul>
+                                <li>Le solveur utilise des algorithmes de parcours de graphe, tels que la recherche en profondeur (DFS) ou la recherche en largeur (BFS), pour explorer toutes les configurations possibles du jeu.</li>
+                                <li>Ces algorithmes permettent de construire un arbre de jeu et d'identifier les stratégies optimales pour chaque position.</li>
+                            </ul>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>    
+        <div id="footer-logo">
+            <a href="https://www.univ-angers.fr/fr/index.html"><img src="../imgs/logoua.png" alt="Logo de l'UA" id="footer-logo-img" width="150px"></a>
+        </div>
+        <div id="footer-copyright">
+            <p>Copyright&nbsp; © &nbsp;2024</p>
+        </div>
+        <div id="footer-slogan">
+            <p>Résolvez vos jeux préférés en un clique</p>
+        </div>
+    </footer>
+</body>
+</html>

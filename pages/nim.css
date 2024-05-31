@@ -1,0 +1,189 @@
+@font-face {
+    font-family: riverad;
+    src: url(../fonts/River\ Adventurer.ttf);
+}
+
+body, 
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    height: 85px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+}
+
+div#logo-header {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.header-li  {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-li a{
+    text-decoration: none;
+    color: black;
+    font-family: riverad;
+    font-size: 21px;
+    letter-spacing: 0.6px;
+}
+
+#logo-header-text{
+    text-decoration: none;
+    color: black;
+    font-family: riverad;
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    margin-top: 17px;
+}
+
+ul#cells-header {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#cells-header-nim a {
+    color: red;
+    font-size: 22px;
+}
+
+#logo-header:hover {
+    transform: scale(1.045);
+    transition: 0.5s;
+}
+
+.header-li:hover {
+    background-color: rgb(247, 208, 208);
+    border-bottom: rgb(150,40,95) 3px solid;
+}
+
+.header-li a:hover {
+    transform: scale(1.04);
+    transition: 0.3s;
+}
+
+footer {
+    width: 100%;
+    height: 78px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(28, 26, 26);
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 100%;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div p {
+    color: #F5F5F5;
+    font-family: sans-serif;
+    font-size: 17.5px;
+}
+
+#footer-slogan p {
+    font-size: 16px;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    min-height: 82.5vh;
+    background-color: rgba(150, 40, 95, 0.356);
+    /* background-color:  #D1D0D0; */
+    padding: 50px 50px;
+}
+
+h1#grand-titre {
+    font-family: riverad;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 10px;
+    word-spacing: 15px;
+    background-color: red;
+    padding: 15px 0px;
+    border-radius: 20px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 110px;
+}
+
+#petit-titre1 {
+    color: white;
+    background-color: rgb(150,40,95);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: riverad;
+    font-size: 35px;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+}
+
+.texte{
+    text-indent: 15px;
+    text-align: justify;
+    font-size: 21.3px;
+    font-family: sans-serif;
+}
+
+#petit-titre2 {
+    color: white;
+    background-color: rgb(150,40,95);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: riverad;
+    font-size: 35px;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#video {
+    float: right;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-bottom:  20px;
+}
+
+figure{
+    float: right;
+}
+
+#figure-img{
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+figcaption{ 
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 21px;
+}

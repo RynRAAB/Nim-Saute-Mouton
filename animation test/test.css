@@ -1,0 +1,115 @@
+html{
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    cursor: none;
+}
+div#cursor{
+    position: relative;
+}
+
+.point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+#point1{
+    background-color: white;
+    top:-22.36px;
+    left: -20px;
+    box-shadow: -3px 4px 2px 2px rgba(255, 255, 255, 0.759);
+}
+
+#point6{
+    background-color: red;
+    top: 0;
+    left: 30px;
+    box-shadow: -3px 4px 2px 2px rgba(255, 0, 0, 0.692);
+}
+
+#point4{
+    background-color: yellow;
+    top:30px;
+    left: 0px;
+    box-shadow: -3px 4px 2px 2px rgba(255, 255, 0, 0.675);
+
+}
+
+#point2{
+    background-color: green;
+    top: 0;
+    left: -30px;
+    box-shadow: -3px 4px 2px 2px rgba(0, 128, 0, 0.668);
+}
+
+#point8{
+    background-color: rebeccapurple;
+    top:-30px;
+    left: 0px;
+    box-shadow: -3px 4px 2px 2px rgba(102, 51, 153, 0.652);
+}
+
+#point7{
+    background-color: orange;
+    top:22.36px;
+    left: -20px;
+    box-shadow: -3px 4px 2px 2px rgba(255, 166, 0, 0.642);
+}
+
+#point3{
+    background-color: blue;
+    top:-22.36px;
+    left: 20px;
+    box-shadow: -3px 4px 2px 2px rgba(0, 0, 255, 0.667);
+}
+
+#point5{
+    background-color:greenyellow;
+    top:22.36px;
+    left: 20px;
+    box-shadow: -3px 4px 2px 2px rgba(172, 255, 47, 0.671);
+
+}
+
+
+.point{
+    animation: tourne 1s infinite ease-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    opacity: 0.6;
+}
+
+@keyframes tourne {
+    0%{
+        transform: translate(0, 30px);
+    }
+    12.5%{
+        transform: translate(22.36px, 20px);
+    }
+    25%{
+        transform: translate(30px, 0);
+    }
+    37.5%{
+        transform: translate(22.36px, -20px);
+    }
+    50%{
+        transform: translate(0, -30px);
+    }
+    62.5%{
+        transform: translate(-22.36px, -20px);
+    }
+    75%{
+        transform: translate(-30px, 0);
+    }
+    87.5%{
+        transform: translate(-22.36px, 20px);
+    }
+}

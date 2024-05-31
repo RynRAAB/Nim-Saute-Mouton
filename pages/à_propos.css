@@ -1,0 +1,234 @@
+@font-face {
+    font-family: riverad;
+    src: url(../fonts/River\ Adventurer.ttf);
+}
+
+body, 
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    height: 85px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 100%;
+}
+
+div#logo-header {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.header-li  {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-li a{
+    text-decoration: none;
+    color: black;
+    font-family: riverad;
+    font-size: 21px;
+    letter-spacing: 0.6px;
+}
+
+#logo-header-text{
+    text-decoration: none;
+    color: black;
+    font-family: riverad;
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    margin-top: 17px;
+}
+
+ul#cells-header {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#cells-header-apropos a {
+    color: red;
+    font-size: 22px;
+}
+
+#logo-header:hover {
+    transform: scale(1.045);
+    transition: 0.5s;
+}
+
+.header-li:hover {
+    background-color: rgb(247, 208, 208);
+    border-bottom: rgb(150,40,95) 3px solid;
+}
+
+.header-li a:hover {
+    transform: scale(1.04);
+    transition: 0.3s;
+}
+
+footer {
+    width: 100%;
+    height: 78px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(28, 26, 26);
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 100%;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div p {
+    color: #F5F5F5;
+    font-family: sans-serif;
+    font-size: 17.5px;
+}
+
+#footer-slogan p {
+    font-size: 16px;
+}
+
+main {
+    margin: 0;
+    padding: 50px;
+    min-height: 82.5vh;
+    background-color: rgba(150, 40, 95, 0.356);
+    /* background-color:  #D1D0D0; */
+}
+
+h1#grand-titre {
+    font-family: riverad;
+    color: white;
+    text-align: center;
+    font-size: 65px;
+    letter-spacing: 8px;
+    word-spacing: 15px;
+    background-color: red;
+    padding: 28px 0px;
+    border-radius: 20px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 110px;
+}
+
+#petit-titre1 {
+    color: white;
+    background-color: rgb(150,40,95);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: riverad;
+    font-size: 35px;
+    letter-spacing: 2px;
+    word-spacing: 7px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+}
+
+.texte{
+    text-indent: 15px;
+    text-align: justify;
+    font-size: 21.5px;
+    font-family: sans-serif;
+}
+
+#texte1{
+    font-weight: bold;
+    font-size: 23px;
+    font-style: italic;
+}
+
+strong.jeux{
+    text-decoration:underline;
+    color: red;
+}
+
+strong.createurs {
+    color: rgb(150,40,95);
+    font-style: italic;
+}
+
+#download-button {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:red;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 430px;
+    margin-bottom: 20px;
+    font-family: riverad;
+    letter-spacing: 3.5px;
+    word-spacing: 7px;
+}
+
+#download-button:hover {
+    background-color: rgb(150,40,95);
+    transform: scale(1.2);
+    transition: 1.5s;
+    font-size: 25px;
+}
+
+#petit-titre2 {
+    color: white;
+    background-color: rgb(150,40,95);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: riverad;
+    font-size: 31px;
+    letter-spacing: 4px;
+    word-spacing: 7px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#box-mail {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#box-mail1, 
+#box-mail2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-mail1 a, 
+#box-mail2 a{
+    text-decoration: none;
+    color: black;
+    font-size: 22.5px;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+#box-mail1 a:hover, 
+#box-mail2 a:hover{
+    color: red;
+}
